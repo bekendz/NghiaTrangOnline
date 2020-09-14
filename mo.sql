@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2020 at 05:56 AM
+-- Generation Time: Sep 14, 2020 at 01:17 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -32,8 +32,8 @@ CREATE TABLE `mo` (
   `Thanh` varchar(30) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `TenNguoiKhuat` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `Email` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `NgayThangNamSinh` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `NgayThangNamMat` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `NgayThangNamSinh` date NOT NULL,
+  `NgayThangNamMat` date NOT NULL,
   `QueQuan` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `NguoiLapMo` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `MatKhau` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
@@ -47,8 +47,9 @@ CREATE TABLE `mo` (
 --
 
 INSERT INTO `mo` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Hinh`, `HinhBia`, `Dao`) VALUES
-(1, 'Phêrô', 'Nguyễn Văn Trương', 'php@gmail.com', '12/09/1998', '15/06/2012', 'Nha Trang', 'Con cháu', '123', '4.jpg', 'upload/anhthetest.jpg', 'Thiên Chúa'),
-(5, '', 'Nguyễn Văn Anh', 'phg@gmail.com', '15/12/1998', '24/08/2015', 'Lâm Đồng', 'Bạn Thân', '123789', '1.jpg', '', 'Đức Phật');
+(1, 'Phêrô', 'Nguyễn Văn Trương', 'php@gmail.com', '1954-09-12', '2015-10-23', 'Lâm Đồng', 'Con và các cháu', '123', '4.jpg', 'upload/anhthetest.jpg', 'Thiên Chúa'),
+(2, '', 'Nguyễn Văn Anh', 'vananh@gmail.com', '1965-12-27', '2017-12-24', 'Vĩnh Long', 'Bạn thân', '12345', '1.jpg', '', 'Đức Phật'),
+(3, 'Anrê', 'Trần Lâm Sơn', 'thuy@gmail.com', '1987-07-15', '2012-11-07', 'Cần Thơ', 'Con và các cháu', '123', '8.jpg', '', 'Thiên Chúa');
 
 --
 -- Indexes for dumped tables
@@ -68,7 +69,7 @@ ALTER TABLE `mo`
 -- AUTO_INCREMENT for table `mo`
 --
 ALTER TABLE `mo`
-  MODIFY `ID` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
