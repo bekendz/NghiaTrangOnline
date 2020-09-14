@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 08, 2020 at 01:13 PM
+-- Generation Time: Sep 14, 2020 at 05:56 AM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.9
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,7 +47,7 @@ CREATE TABLE `mo` (
 --
 
 INSERT INTO `mo` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Hinh`, `HinhBia`, `Dao`) VALUES
-(1, 'Phêrô', 'Nguyễn Văn Trương', 'php@gmail.com', '12/09/1998', '15/06/2012', 'Nha Trang', 'Con cháu', '123', '4.jpg', 'anhthetest.jpg', 'Thiên Chúa'),
+(1, 'Phêrô', 'Nguyễn Văn Trương', 'php@gmail.com', '12/09/1998', '15/06/2012', 'Nha Trang', 'Con cháu', '123', '4.jpg', 'upload/anhthetest.jpg', 'Thiên Chúa'),
 (5, '', 'Nguyễn Văn Anh', 'phg@gmail.com', '15/12/1998', '24/08/2015', 'Lâm Đồng', 'Bạn Thân', '123789', '1.jpg', '', 'Đức Phật');
 
 --
