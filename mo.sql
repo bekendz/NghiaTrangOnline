@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 17, 2020 at 12:47 PM
+-- Generation Time: Sep 22, 2020 at 12:58 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -39,18 +39,20 @@ CREATE TABLE `mo` (
   `MatKhau` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `Hinh` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `HinhBia` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Dao` varchar(20) COLLATE utf8mb4_vietnamese_ci NOT NULL
+  `Dao` varchar(20) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `DienThoai` varchar(10) COLLATE utf8mb4_vietnamese_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `mo`
 --
 
-INSERT INTO `mo` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Hinh`, `HinhBia`, `Dao`) VALUES
-(1, 'Phêrô', 'Nguyễn Văn Trương', 'php@gmail.com', '1954-09-12', '2015-09-17', 'Lâm Đồng', 'Con và các cháu', '123', '4.jpg', 'upload/anhthetest.jpg', 'Thiên Chúa'),
-(2, '', 'Nguyễn Văn Anh', 'vananh@gmail.com', '1965-12-27', '2017-08-11', 'Vĩnh Long', 'Bạn thân', '12345', '1.jpg', '', 'Đức Phật'),
-(3, 'Anrê', 'Trần Lâm Sơn', 'thuy@gmail.com', '1967-07-15', '2012-11-07', 'Cần Thơ', 'Con và các cháu', '123', '4.jpg', '', 'Thiên Chúa'),
-(4, '', 'Lâm Văn Độ', 'do@gmail.com', '1989-09-18', '2019-01-15', 'Vĩnh Long', 'Con và Mẹ', '14782', '1.jpg', '', 'Đức Phật');
+INSERT INTO `mo` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Hinh`, `HinhBia`, `Dao`, `DienThoai`) VALUES
+(1, 'Phêrô', 'Nguyễn Văn Trương', 'php@gmail.com', '1954-09-12', '2015-09-17', 'Lâm Đồng', 'Con và các cháu', '123', '4.jpg', 'upload/anhthetest.jpg', 'Thiên Chúa', ''),
+(2, '', 'Nguyễn Văn Anh', 'vananh@gmail.com', '1965-12-27', '2017-08-11', 'Vĩnh Long', 'Bạn thân', '12345', '1.jpg', '', 'Đức Phật', ''),
+(3, 'Anrê', 'Trần Lâm Sơn', 'thuy@gmail.com', '1967-07-15', '2012-11-07', 'Cần Thơ', 'Con và các cháu', '123', '4.jpg', '', 'Thiên Chúa', ''),
+(4, '', 'Lâm Văn Độ', 'do@gmail.com', '1989-09-18', '2019-01-15', 'Vĩnh Long', 'Con và Mẹ', '14782', '1.jpg', '', 'Đức Phật', ''),
+(5, 'Anna', 'Nguyễn Thị Bích Thủy ', 'thuy@gmail.com', '0000-00-00', '2010-10-12', 'Lâm Đồng', 'Bạn thân', '123', '4.jpg', '', 'Thiên Chúa', '');
 
 --
 -- Indexes for dumped tables
@@ -70,7 +72,7 @@ ALTER TABLE `mo`
 -- AUTO_INCREMENT for table `mo`
 --
 ALTER TABLE `mo`
-  MODIFY `ID` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
