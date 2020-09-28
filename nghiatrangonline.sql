@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2020 at 12:36 PM
+-- Generation Time: Sep 28, 2020 at 12:51 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -98,6 +98,13 @@ CREATE TABLE `mobonglai` (
   `DienThoai` text COLLATE utf8mb4_vietnamese_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
+--
+-- Dumping data for table `mobonglai`
+--
+
+INSERT INTO `mobonglai` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Hinh`, `HinhBia`, `Dao`, `DienThoai`) VALUES
+(1, 'FausTiNa', 'Ninh Lâm Hằng ', 'test@gmail.com', '0000-00-00', '2012-07-13', 'Cần Thơ', 'Bạn thân', '123456', '4.jpg', '', 'Thiên Chúa', '0856436515');
+
 -- --------------------------------------------------------
 
 --
@@ -120,6 +127,13 @@ CREATE TABLE `mothienthai` (
   `DienThoai` varchar(10) COLLATE utf8mb4_vietnamese_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
+--
+-- Dumping data for table `mothienthai`
+--
+
+INSERT INTO `mothienthai` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Hinh`, `HinhBia`, `Dao`, `DienThoai`) VALUES
+(1, 'Giuđa', 'Đinh Văn Lực ', 'vananh@gmail.com', '1962-02-14', '2010-08-17', 'Vĩnh Lộc - Lâm Đồng', 'Con và các cháu', '147856', '4.jpg', '', 'Thiên Chúa', '0123456789');
+
 -- --------------------------------------------------------
 
 --
@@ -141,6 +155,13 @@ CREATE TABLE `movinhhang` (
   `Dao` varchar(20) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `DienThoai` varchar(10) COLLATE utf8mb4_vietnamese_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Dumping data for table `movinhhang`
+--
+
+INSERT INTO `movinhhang` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Hinh`, `HinhBia`, `Dao`, `DienThoai`) VALUES
+(1, 'Phaolô', 'Trần Văn Long ', 'vananh@gmail.com', '1974-10-30', '2013-07-09', 'Hà Nội', 'Con và các cháu', '12345', '4.jpg', '', 'Thiên Chúa', '0123456789');
 
 --
 -- Indexes for dumped tables
@@ -190,19 +211,19 @@ ALTER TABLE `mo`
 -- AUTO_INCREMENT for table `mobonglai`
 --
 ALTER TABLE `mobonglai`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `mothienthai`
 --
 ALTER TABLE `mothienthai`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `movinhhang`
 --
 ALTER TABLE `movinhhang`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
