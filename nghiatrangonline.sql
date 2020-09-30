@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 29, 2020 at 12:48 PM
+-- Generation Time: Sep 30, 2020 at 12:41 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -179,11 +179,19 @@ CREATE TABLE `mothucung` (
   `QueQuan` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `NguoiLapMo` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `MatKhau` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `Hinh` int(11) NOT NULL,
+  `Hinh` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `HinhBia` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `Dao` varchar(20) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `DienThoai` varchar(10) COLLATE utf8mb4_vietnamese_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Dumping data for table `mothucung`
+--
+
+INSERT INTO `mothucung` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Hinh`, `HinhBia`, `Dao`, `DienThoai`) VALUES
+(1, '', 'Meo ', 'vananh@gmail.com', '2011-07-04', '2012-02-08', 'Hà Nội', 'Toản', '123456', '1.jpg', '', '', '0123456789'),
+(2, '', 'LiLy ', 'vananh@gmail.com', '0000-00-00', '2015-06-19', 'Thanh Hóa', 'Toàn', '147852', '1.jpg', '', '', '0123456789');
 
 -- --------------------------------------------------------
 
@@ -293,7 +301,7 @@ ALTER TABLE `mothieunhi`
 -- AUTO_INCREMENT for table `mothucung`
 --
 ALTER TABLE `mothucung`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `movinhhang`
