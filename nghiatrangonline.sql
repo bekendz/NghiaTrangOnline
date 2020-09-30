@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 28, 2020 at 12:51 PM
+-- Generation Time: Sep 29, 2020 at 12:48 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -137,6 +137,57 @@ INSERT INTO `mothienthai` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNa
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `mothieunhi`
+--
+
+CREATE TABLE `mothieunhi` (
+  `ID` int(11) NOT NULL,
+  `Thanh` varchar(30) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `TenNguoiKhuat` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `Email` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `NgayThangNamSinh` date NOT NULL,
+  `NgayThangNamMat` date NOT NULL,
+  `QueQuan` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `NguoiLapMo` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `MatKhau` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `Hinh` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `HinhBia` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `Dao` varchar(20) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `DienThoai` varchar(10) COLLATE utf8mb4_vietnamese_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Dumping data for table `mothieunhi`
+--
+
+INSERT INTO `mothieunhi` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Hinh`, `HinhBia`, `Dao`, `DienThoai`) VALUES
+(1, 'MátThêu', 'Nguyễn Thanh Long ', 'vananh@gmail.com', '2017-06-21', '2017-06-22', 'Hà Nội', 'Cha và Mẹ', '123456', '4.jpg', '', 'Thiên Chúa', '0123456789');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mothucung`
+--
+
+CREATE TABLE `mothucung` (
+  `ID` int(11) NOT NULL,
+  `Thanh` varchar(30) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `TenNguoiKhuat` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `Email` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `NgayThangNamSinh` date NOT NULL,
+  `NgayThangNamMat` date NOT NULL,
+  `QueQuan` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `NguoiLapMo` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `MatKhau` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `Hinh` int(11) NOT NULL,
+  `HinhBia` text COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `Dao` varchar(20) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `DienThoai` varchar(10) COLLATE utf8mb4_vietnamese_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `movinhhang`
 --
 
@@ -161,7 +212,8 @@ CREATE TABLE `movinhhang` (
 --
 
 INSERT INTO `movinhhang` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Hinh`, `HinhBia`, `Dao`, `DienThoai`) VALUES
-(1, 'Phaolô', 'Trần Văn Long ', 'vananh@gmail.com', '1974-10-30', '2013-07-09', 'Hà Nội', 'Con và các cháu', '12345', '4.jpg', '', 'Thiên Chúa', '0123456789');
+(1, 'Phaolô', 'Trần Văn Long ', 'vananh@gmail.com', '1974-10-30', '2019-07-09', 'Thanh Hóa', 'Con và các cháu', '12345', '8.jpg', '', 'Thiên Chúa', '0123456789'),
+(2, '', 'Nguyễn Thị Phượng', 'test@gmail.com', '1934-04-23', '2010-06-25', 'Gia Lai', 'Sao Băng Red', 'saobang145', '1.jpg', '', 'Đức Phật', '0856436515');
 
 --
 -- Indexes for dumped tables
@@ -189,6 +241,18 @@ ALTER TABLE `mobonglai`
 -- Indexes for table `mothienthai`
 --
 ALTER TABLE `mothienthai`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `mothieunhi`
+--
+ALTER TABLE `mothieunhi`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `mothucung`
+--
+ALTER TABLE `mothucung`
   ADD PRIMARY KEY (`ID`);
 
 --
@@ -220,10 +284,22 @@ ALTER TABLE `mothienthai`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `mothieunhi`
+--
+ALTER TABLE `mothieunhi`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `mothucung`
+--
+ALTER TABLE `mothucung`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `movinhhang`
 --
 ALTER TABLE `movinhhang`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
