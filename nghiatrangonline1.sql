@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2020 at 11:40 AM
+-- Generation Time: Oct 08, 2020 at 12:32 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `nghiatrangonline1`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `account`
+--
+
+CREATE TABLE `account` (
+  `Username` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `Password` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `Email` varchar(150) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `DienThoai` varchar(10) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `HovaTen` varchar(300) COLLATE utf8mb4_vietnamese_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Dumping data for table `account`
+--
+
+INSERT INTO `account` (`Username`, `Password`, `Email`, `DienThoai`, `HovaTen`) VALUES
+('hoanglongthien123', '123456', 'hoanglongthien123@gmail.com', '0856210522', ' Thiên Hoàng Long');
 
 -- --------------------------------------------------------
 
@@ -48,6 +69,64 @@ INSERT INTO `khumo` (`MaKM`, `TenKhu`, `Hinh`, `Dao`, `Dao1`, `MoTa`) VALUES
 ('274802890', 'Khu Mộ Thai Nhi', 'khu.jpg', 'Thiên Chúa', 'Đức Phật', ''),
 ('254264644', 'Khu Mộ Thiếu Nhi', 'khu.jpg', 'Thiên Chúa', 'Đức Phật', ''),
 ('723895938', 'Khu Mộ Thú Cưng', 'khu.jpg', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mo`
+--
+
+CREATE TABLE `mo` (
+  `ID` int(11) NOT NULL,
+  `Thanh` varchar(30) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `TenNguoiKhuat` varchar(200) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `Email` varchar(200) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `NgayThangNamSinh` date NOT NULL,
+  `NgayThangNamMat` date NOT NULL,
+  `QueQuan` varchar(200) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `NguoiLapMo` varchar(200) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `MatKhau` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `Dao` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `Hinh` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `HinhBia` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `MaKM` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
+
+--
+-- Dumping data for table `mo`
+--
+
+INSERT INTO `mo` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Dao`, `Hinh`, `HinhBia`, `MaKM`) VALUES
+(1, 'Phêrô', 'Nguyễn Văn Anh', 'vananh@gmail.com', '1970-10-11', '2018-10-23', 'Thanh Hóa', 'Con và các cháu', '123', 'Thiên Chúa', '4.jpg', 'anhthetest.jpg', '128416300'),
+(2, 'Gioan Baotixita', 'Lâm Văn Trụ', 'hoanglongthien123@gmail.com', '1978-02-16', '2013-12-03', 'Lâm Đồng', 'Con và Các cháu', '123', 'Thiên Chúa', '1.jpg', '', '128416300'),
+(3, '', 'Lê Thị Bành', 'hoanglongthien123@gmail.com', '1983-07-22', '2014-06-27', 'Lâm Đồng', 'Con và Các Cháu', '123456', 'Đức Phật', '1.jpg', '', '347684546'),
+(4, '', 'Trần Long', 'hoanglongthien123@gmail.com', '0000-00-00', '2015-06-10', 'Hà Nội', 'Bạn thân', '15963', 'Đức Phật', '1.jpg', '', '347684546');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `account`
+--
+ALTER TABLE `account`
+  ADD PRIMARY KEY (`Username`);
+
+--
+-- Indexes for table `mo`
+--
+ALTER TABLE `mo`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `mo`
+--
+ALTER TABLE `mo`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
