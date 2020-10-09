@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2020 at 12:32 PM
+-- Generation Time: Oct 09, 2020 at 01:16 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -40,7 +40,8 @@ CREATE TABLE `account` (
 --
 
 INSERT INTO `account` (`Username`, `Password`, `Email`, `DienThoai`, `HovaTen`) VALUES
-('hoanglongthien123', '123456', 'hoanglongthien123@gmail.com', '0856210522', ' Thiên Hoàng Long');
+('hoanglongthien123', '123456', 'hoanglongthien123@gmail.com', '0856210522', ' Thiên Hoàng Long'),
+('test1', '123456', 'test@gmail.com', '0869125052', ' Test');
 
 -- --------------------------------------------------------
 
@@ -89,18 +90,19 @@ CREATE TABLE `mo` (
   `Dao` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `Hinh` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `HinhBia` varchar(100) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `MaKM` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL
+  `MaKM` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `HienThi` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `mo`
 --
 
-INSERT INTO `mo` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Dao`, `Hinh`, `HinhBia`, `MaKM`) VALUES
-(1, 'Phêrô', 'Nguyễn Văn Anh', 'vananh@gmail.com', '1970-10-11', '2018-10-23', 'Thanh Hóa', 'Con và các cháu', '123', 'Thiên Chúa', '4.jpg', 'anhthetest.jpg', '128416300'),
-(2, 'Gioan Baotixita', 'Lâm Văn Trụ', 'hoanglongthien123@gmail.com', '1978-02-16', '2013-12-03', 'Lâm Đồng', 'Con và Các cháu', '123', 'Thiên Chúa', '1.jpg', '', '128416300'),
-(3, '', 'Lê Thị Bành', 'hoanglongthien123@gmail.com', '1983-07-22', '2014-06-27', 'Lâm Đồng', 'Con và Các Cháu', '123456', 'Đức Phật', '1.jpg', '', '347684546'),
-(4, '', 'Trần Long', 'hoanglongthien123@gmail.com', '0000-00-00', '2015-06-10', 'Hà Nội', 'Bạn thân', '15963', 'Đức Phật', '1.jpg', '', '347684546');
+INSERT INTO `mo` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Dao`, `Hinh`, `HinhBia`, `MaKM`, `HienThi`) VALUES
+(1, 'Phêrô', 'Nguyễn Văn Anh', 'vananh@gmail.com', '1970-10-11', '2018-10-23', 'Thanh Hóa', 'Con và các cháu', '123456', 'Thiên Chúa', '1.jpg', '', '128416300', 'Công Khai'),
+(2, 'Gioan Baotixita', 'Lâm Văn Trụ', 'hoanglongthien123@gmail.com', '1978-02-16', '2013-12-03', 'Lâm Đồng', 'Con và Các cháu', '123', 'Thiên Chúa', '1.jpg', '', '128416300', 'Riêng Tư'),
+(3, '', 'Lê Thị Bành', 'hoanglongthien123@gmail.com', '1983-07-22', '2014-06-27', 'Lâm Đồng', 'Con và Các Cháu', '123456', 'Đức Phật', '1.jpg', '', '347684546', 'Riêng Tư'),
+(4, '', 'Trần Long', 'hoanglongthien123@gmail.com', '0000-00-00', '2015-06-10', 'Hà Nội', 'Bạn thân', '15963', 'Đức Phật', '1.jpg', '', '347684546', 'Riêng Tư');
 
 --
 -- Indexes for dumped tables
