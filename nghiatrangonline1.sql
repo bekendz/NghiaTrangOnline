@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2020 at 01:16 PM
+-- Generation Time: Oct 12, 2020 at 01:05 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -101,8 +101,10 @@ CREATE TABLE `mo` (
 INSERT INTO `mo` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Dao`, `Hinh`, `HinhBia`, `MaKM`, `HienThi`) VALUES
 (1, 'Phêrô', 'Nguyễn Văn Anh', 'vananh@gmail.com', '1970-10-11', '2018-10-23', 'Thanh Hóa', 'Con và các cháu', '123456', 'Thiên Chúa', '1.jpg', '', '128416300', 'Công Khai'),
 (2, 'Gioan Baotixita', 'Lâm Văn Trụ', 'hoanglongthien123@gmail.com', '1978-02-16', '2013-12-03', 'Lâm Đồng', 'Con và Các cháu', '123', 'Thiên Chúa', '1.jpg', '', '128416300', 'Riêng Tư'),
-(3, '', 'Lê Thị Bành', 'hoanglongthien123@gmail.com', '1983-07-22', '2014-06-27', 'Lâm Đồng', 'Con và Các Cháu', '123456', 'Đức Phật', '1.jpg', '', '347684546', 'Riêng Tư'),
-(4, '', 'Trần Long', 'hoanglongthien123@gmail.com', '0000-00-00', '2015-06-10', 'Hà Nội', 'Bạn thân', '15963', 'Đức Phật', '1.jpg', '', '347684546', 'Riêng Tư');
+(3, '', 'Lê Thị Bành', 'hoanglongthien123@gmail.com', '1983-07-22', '2014-06-27', 'Lâm Đồng', 'Con và Các Cháu', '123456', 'Đức Phật', '1.jpg', '', '347684546', 'Công Khai'),
+(4, '', 'Trần Long', 'hoanglongthien123@gmail.com', '0000-00-00', '2015-06-10', 'Hà Nội', 'Bạn thân', '15963', 'Đức Phật', '1.jpg', '', '347684546', 'Riêng Tư'),
+(5, 'Giuđa', 'Trần Văn Lượng', 'test@gmail.com', '2004-02-04', '2010-02-06', 'Nha Trang', 'Mẹ', '123456', 'Thiên Chúa', '4.jpg', '', '254264644', 'Công Khai'),
+(6, 'Maria', 'Nguyễn Thị Nhung', 'test@gmail.com', '1964-02-05', '2012-02-12', 'Lạng Sơn', 'Con và các cháu', 'nhung123', 'Thiên Chúa', '4.jpg', '', '347684546', 'Công Khai');
 
 --
 -- Indexes for dumped tables
@@ -128,7 +130,7 @@ ALTER TABLE `mo`
 -- AUTO_INCREMENT for table `mo`
 --
 ALTER TABLE `mo`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
