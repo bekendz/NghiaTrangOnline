@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 12, 2020 at 01:05 PM
+-- Generation Time: Oct 14, 2020 at 12:33 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -32,16 +32,18 @@ CREATE TABLE `account` (
   `Password` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `Email` varchar(150) COLLATE utf8mb4_vietnamese_ci NOT NULL,
   `DienThoai` varchar(10) COLLATE utf8mb4_vietnamese_ci NOT NULL,
-  `HovaTen` varchar(300) COLLATE utf8mb4_vietnamese_ci NOT NULL
+  `HovaTen` varchar(300) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `GioiTinh` tinyint(1) NOT NULL,
+  `HinhNen` text COLLATE utf8mb4_vietnamese_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Dumping data for table `account`
 --
 
-INSERT INTO `account` (`Username`, `Password`, `Email`, `DienThoai`, `HovaTen`) VALUES
-('hoanglongthien123', '123456', 'hoanglongthien123@gmail.com', '0856210522', ' Thiên Hoàng Long'),
-('test1', '123456', 'test@gmail.com', '0869125052', ' Test');
+INSERT INTO `account` (`Username`, `Password`, `Email`, `DienThoai`, `HovaTen`, `GioiTinh`, `HinhNen`) VALUES
+('hoanglongthien123', '123456', 'hoanglongthien123@gmail.com', '0865111552', 'Hoàng Thiên Long', 1, ''),
+('test1', '123456', 'test@gmail.com', '0869125052', ' Test', 0, '');
 
 -- --------------------------------------------------------
 
@@ -130,7 +132,7 @@ ALTER TABLE `mo`
 -- AUTO_INCREMENT for table `mo`
 --
 ALTER TABLE `mo`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
