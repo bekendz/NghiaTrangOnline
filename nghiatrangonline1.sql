@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 14, 2020 at 12:33 PM
+-- Generation Time: Oct 19, 2020 at 09:28 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -101,7 +101,7 @@ CREATE TABLE `mo` (
 --
 
 INSERT INTO `mo` (`ID`, `Thanh`, `TenNguoiKhuat`, `Email`, `NgayThangNamSinh`, `NgayThangNamMat`, `QueQuan`, `NguoiLapMo`, `MatKhau`, `Dao`, `Hinh`, `HinhBia`, `MaKM`, `HienThi`) VALUES
-(1, 'Phêrô', 'Nguyễn Văn Anh', 'vananh@gmail.com', '1970-10-11', '2018-10-23', 'Thanh Hóa', 'Con và các cháu', '123456', 'Thiên Chúa', '1.jpg', '', '128416300', 'Công Khai'),
+(1, 'Phêrô', 'Nguyễn Văn Anh', 'vananh@gmail.com', '1970-10-11', '2018-10-23', 'Thanh Hóa', 'Con và các cháu', '123', 'Thiên Chúa', '1.jpg', '', '128416300', 'Công Khai'),
 (2, 'Gioan Baotixita', 'Lâm Văn Trụ', 'hoanglongthien123@gmail.com', '1978-02-16', '2013-12-03', 'Lâm Đồng', 'Con và Các cháu', '123', 'Thiên Chúa', '1.jpg', '', '128416300', 'Riêng Tư'),
 (3, '', 'Lê Thị Bành', 'hoanglongthien123@gmail.com', '1983-07-22', '2014-06-27', 'Lâm Đồng', 'Con và Các Cháu', '123456', 'Đức Phật', '1.jpg', '', '347684546', 'Công Khai'),
 (4, '', 'Trần Long', 'hoanglongthien123@gmail.com', '0000-00-00', '2015-06-10', 'Hà Nội', 'Bạn thân', '15963', 'Đức Phật', '1.jpg', '', '347684546', 'Riêng Tư'),
